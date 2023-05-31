@@ -1,0 +1,47 @@
+<svg width="1588px" height="1800px" viewBox="0 0 1588 1800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M114.11209,2.67381414e-14 L327.972512,2.67381414e-14 C390.742443,0.526828241 436.227681,18.6196153 464.428228,54.2482566 C492.628775,89.876898 501.933601,138.540775 492.357761,200.239888 C488.638842,228.432725 480.387961,256.083682 467.620175,283.20781 C455.379361,310.331939 438.365683,334.791821 416.54903,356.60251 C389.944456,384.253467 361.487951,401.804374 331.164458,409.25523 C300.840966,416.706087 269.448472,420.423989 237.002034,420.423989 L141.243636,420.423989 L110.920144,572 L0,572 L114.11209,0 L114.11209,0 M206.9566,91.0460568 L159,330.165595 C162.197107,330.691958 165.394213,330.96266 168.59132,330.96266 C172.316251,330.96266 176.056263,330.96266 179.781193,330.96266 C230.934901,331.489024 273.568017,326.45097 307.665461,315.818422 C341.762906,304.659511 364.685557,265.874021 376.403255,199.446914 C385.994575,143.652355 376.403255,111.499049 347.629295,103.002034 C319.383159,94.5050187 283.958613,90.5196931 241.325497,91.0460568 C234.931284,91.5724206 228.808523,91.843122 222.942134,91.843122 C217.61865,91.843122 212.023713,91.843122 206.157324,91.843122 L206.9566,91.0460568" id="path-1"></path>
+        <filter x="-2.5%" y="-1.7%" width="108.5%" height="107.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="10" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.832085883 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M533.429633,0 L637.341365,0 L607.975006,143.915042 L701.344967,143.915042 C752.54785,144.924423 790.694281,155.47317 815.798469,175.561281 C841.39991,195.649393 848.929746,233.835287 838.387976,290.090529 L787.938077,541 L682.520378,541 L730.711326,301.392758 C735.726481,276.271956 734.220514,258.44429 726.193425,247.895543 C718.166336,237.346797 700.847714,232.072423 674.237559,232.072423 L590.656384,231.318942 L528.911732,541 L425,541 L533.429633,0 L533.429633,0" id="path-3"></path>
+        <filter x="-2.9%" y="-1.8%" width="110.1%" height="107.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="10" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M913.900344,2.52890463e-14 L1116.11917,2.52890463e-14 C1175.47219,0.498276361 1218.48142,17.6105102 1245.14685,51.3082287 C1271.81229,85.0059472 1280.6106,131.032447 1271.55603,189.387727 C1268.03955,216.05263 1260.23781,242.205021 1248.16504,267.859135 C1236.59057,293.51325 1220.50304,316.647509 1199.87398,337.276151 C1174.71764,363.428541 1147.81018,380.028262 1119.13736,387.075314 C1090.46454,394.122365 1060.78091,397.638773 1030.10071,397.638773 L939.554971,397.638773 L910.882152,541 L806,541 L913.900344,0 L913.900344,0 M1002.35262,86.0435621 L957,312.210792 C960.023508,312.708644 963.047016,312.964682 966.070524,312.964682 C969.593197,312.964682 973.130131,312.964682 976.652803,312.964682 C1025.02893,313.462535 1065.34713,308.697376 1097.59313,298.640758 C1129.83913,288.086287 1151.51711,251.401678 1162.59855,188.572706 C1171.66908,135.800353 1162.59855,105.388684 1135.38698,97.3519236 C1108.67457,89.3151635 1075.17353,85.5457097 1034.85533,86.0435621 C1028.80832,86.5414145 1023.01801,86.7974528 1017.47016,86.7974528 C1012.43574,86.7974528 1007.1446,86.7974528 1001.59675,86.7974528 L1002.35262,86.0435621" id="path-5"></path>
+        <filter x="-2.6%" y="-1.8%" width="109.0%" height="107.4%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="10" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <g id="html5-without-wordmark-black-white">
+                <polygon id="Path" fill="#4F5B93" points="144.867 1620.068 0.424 0 1587.576 0 1442.982 1619.811 793.033 1800"></polygon>
+                <polygon id="Path" fill="#8892BF" points="794.001 1662.27 1319.193 1516.666 1442.756 132.468 794.001 132.468"></polygon>
+            </g>
+            <g id="php-logo" transform="translate(157.000000, 532.000000)">
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+                <g id="Path">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                </g>
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

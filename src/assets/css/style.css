@@ -15,3 +15,10 @@ body {
 body.dark {
     @apply bg-zinc-900
 }
+
+.swiper-pagination-bullet{
+    @apply bg-primary dark:bg-white
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-primary dark:bg-white
+}
