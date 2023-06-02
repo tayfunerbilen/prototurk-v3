@@ -5,7 +5,7 @@ import { createElement } from "react";
 export default function Button({ children, as, variant, size, className, ...props }) {
   return createElement(as, {
     ...props,
-    className: classNames("flex items-center justify-center rounded", {
+    className: classNames("inline-flex items-center justify-center rounded", {
       "bg-primary dark:bg-blue-500 text-white": variant === 'primary',
       "bg-white text-primary": variant === 'light',
       "bg-zinc-200 text-primary": variant === 'gray',

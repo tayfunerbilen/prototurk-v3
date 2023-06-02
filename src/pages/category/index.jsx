@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import User from "../user"
 
 export default function Category() {
 

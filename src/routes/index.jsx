@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import Layout from "~/layouts";
 import WebLayout from "~/layouts/web";
 import Articles from "~/pages/articles";
+import ArticleDetail from "~/pages/articles/detail";
 import Category from "~/pages/category";
 import Discover from "~/pages/discover";
 import Home from "~/pages/home";
@@ -8,8 +10,10 @@ import LectureRequests from "~/pages/lecture-requests";
 import QADashboard from "~/pages/qa";
 import Categories from "~/pages/qa/categories";
 import PopularQuestions from "~/pages/qa/popular-questions";
+import Question from "~/pages/qa/question";
 import UnansweredQuestions from "~/pages/qa/unanswered-questions";
 import UnsolvedQuestions from "~/pages/qa/unsolved-questions";
+import User from "~/pages/user";
 
 const routes = createBrowserRouter([
   {
@@ -26,7 +30,17 @@ const routes = createBrowserRouter([
       },
       {
         path: '/makaleler',
-        element: <Articles />
+        element: <Layout />,
+        children: [
+          {
+            index: true,
+            element: <Articles />
+          },
+          {
+            path: ':slug',
+            element: <ArticleDetail />
+          }
+        ]
       },
       {
         path: '/ders-istekleri',
@@ -51,6 +65,14 @@ const routes = createBrowserRouter([
       {
         path: '/populer-sorular',
         element: <PopularQuestions />
+      },
+      {
+        path: '/soru/:slug',
+        element: <Question />
+      },
+      {
+        path: '/uye/:slug',
+        element: <User />
       },
       {
         path: '/:categorySlug',
