@@ -16,6 +16,26 @@ body.dark {
     @apply bg-zinc-900
 }
 
+/* PAGINATION */
+.pagination {
+    @apply flex items-center gap-x-1.5 border border-zinc-200 p-3 rounded
+}
+.pagination .previous {
+    @apply mr-auto
+}
+.pagination .next {
+    @apply ml-auto
+}
+.pagination li:not(.break) a {
+    @apply w-9 h-9 rounded-full border border-zinc-300 flex items-center justify-center text-sm text-zinc-500 font-semibold hover:border-zinc-600 hover:text-black
+}
+.pagination li.break a {
+    @apply h-9 flex items-center text-zinc-400 pb-2
+}
+.pagination li.selected a {
+    @apply !bg-primary !border-primary !text-white
+}
+
 .swiper-pagination-bullet{
     @apply bg-primary dark:bg-white
 }

@@ -5,8 +5,9 @@ import ModalTitle from "~/components/modal/header";
 import Or from "~/components/or";
 import { modal } from "~/stores/modal/actions";
 import { loginSchema } from "~/validations";
+import {setUser} from "~/stores/auth/actions.js";
 
-export default function LoginModal() {
+export default function LoginModal({ destroy }) {
   return (
     <>
       <ModalTitle
@@ -19,7 +20,8 @@ export default function LoginModal() {
           password: ''
         }}
         onSubmit={values => {
-          console.log('gonderilen degerler', values)
+          setUser(values)
+          destroy()
         }}
       >
         <Form className="grid gap-y-4 p-4">

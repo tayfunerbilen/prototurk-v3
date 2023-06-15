@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import useColorScheme from '~/hooks/use-color-scheme'
 import { useTranslation } from 'react-i18next'
 
-export default function Apperance() {
+export default function Appearance() {
 
   const theme = useTheme()
   const { colorScheme } = useColorScheme()

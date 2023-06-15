@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom"
 export default function MenuItem({ item }) {
   return (
     <NavLink
+      end={true}
       to={item.path}
       onClick={e => {
         if (item?.onClick) {

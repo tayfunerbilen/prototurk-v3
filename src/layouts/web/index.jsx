@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import {Outlet, ScrollRestoration} from "react-router-dom";
 import Header from "./components/header";
 import Sidebar from "./components/sidebar";
 import { useTheme } from "~/stores/app/hooks";
@@ -13,8 +13,6 @@ export default function WebLayout() {
   const theme = useTheme()
   const { colorScheme } = useColorScheme()
 
-  console.log('modals', modals)
-
   useEffect(() => {
     if (theme === 'default') {
       document.body.className = colorScheme
@@ -25,6 +23,7 @@ export default function WebLayout() {
 
   return (
     <>
+      <ScrollRestoration />
       {modals.length > 0 && <Modals />}
       <Header />
       <Sidebar />
