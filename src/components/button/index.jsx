@@ -10,8 +10,8 @@ export default function Button({ children, as, variant, size, className, ...prop
       "bg-transparent border border-primary dark:border-blue-500 text-primary dark:text-white": variant === 'primary-outline',
       "bg-white text-primary": variant === 'light',
       "bg-zinc-200 text-primary": variant === 'gray',
-      "px-5 font-medium h-10 text-15": size === 'normal',
-      "px-4 font-medium h-8 text-sm": size === 'small',
+      "px-5 font-medium h-10 text-sm md:text-15": size === 'normal',
+      "px-4 font-medium h-8 text-[13px] md:text-sm": size === 'small',
       [className]: !!className
     })
   }, children)

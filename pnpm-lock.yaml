@@ -52,6 +52,9 @@ dependencies:
   swiper:
     specifier: ^9.3.2
     version: 9.3.2
+  use-breakpoint:
+    specifier: ^3.1.1
+    version: 3.1.1(react-dom@18.2.0)(react@18.2.0)
   yup:
     specifier: ^1.2.0
     version: 1.2.0
@@ -2645,6 +2648,17 @@ packages:
     dependencies:
       punycode: 2.3.0
     dev: true
+
+  /use-breakpoint@3.1.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-zJ2a9sqdiOnsYwjZryOuq+SIDRP2vWsl7iWDUJ7Xid9t29zF1oLZjkEE+uRooPB/98YT+784rCFIvmKhV6VqLg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /use-sync-external-store@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}

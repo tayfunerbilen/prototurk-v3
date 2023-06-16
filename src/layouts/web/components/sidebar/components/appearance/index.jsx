@@ -87,6 +87,6 @@ export default function Appearance() {
         </Menu.Items>
       </Menu>
 
-    </div >
+    </div>
   )
 }

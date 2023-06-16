@@ -15,7 +15,7 @@ export default function MenuItem({ item }) {
       }}
       className={({ isActive }) => classNames("px-3 h-9 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800 flex items-center rounded text-15 font-medium", {
         "text-zinc-800 dark:text-zinc-400": !isActive,
-        "text-red-600": item?.sensitive,
+        "text-red-600 dark:text-red-500": item?.sensitive,
         "!bg-zinc-100 text-primary dark:!bg-blue-500/20 dark:text-white": (isActive && item?.path)
       })}
     >

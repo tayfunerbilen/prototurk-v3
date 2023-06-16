@@ -6,18 +6,24 @@ import {Link} from "react-router-dom";
 import {removeUser} from "~/stores/auth/actions.js";
 import {MdArrowDropDown} from "react-icons/md";
 import classNames from "classnames";
+import {useBreakpoint} from "~/hooks/use-breakpoint.js";
+import {RiUser3Fill, RiUserFill, RiUserLine} from "react-icons/ri";
+import {CiLogin} from "react-icons/ci";
+import {LuUser} from "react-icons/lu";
 
 function UserMenu() {
+
 	const user = useAuth()
+
 	return (
-		<Menu>
+		<Menu as="nav" className="relative">
 			<Menu.Button className="flex items-center gap-x-2.5 text-15 font-medium">
 				<img
 					src="https://www.gravatar.com/avatar/8b0987af0a615d1535491eca8c1362e4?s=80&d=mp&r=g"
 					className="w-8 h-8 rounded-full object-cover"
 				/>
-				<div className="flex items-center">
-					@{user.username}
+				<div className="flex items-center dark:text-white">
+					<span className="hidden md:block">@{user.username}</span>
 					<MdArrowDropDown size={22}/>
 				</div>
 			</Menu.Button>
@@ -30,12 +36,12 @@ function UserMenu() {
 				leaveTo="transform scale-95 opacity-0 translate-y-0"
 			>
 				<Menu.Items
-					className="absolute top-0 right-0 w-[200px] rounded bg-white shadow-lg grid p-1.5 border border-zinc-300">
+					className="absolute top-0 right-0 w-[200px] rounded bg-white dark:bg-zinc-800 dark:border-zinc-700 shadow-lg grid p-1.5 border border-zinc-300">
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/uye/tayfunerbilen"
 							>
@@ -46,8 +52,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/profil"
 							>
@@ -58,8 +64,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/profil/takipciler"
 							>
@@ -70,8 +76,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/profil/takip-ettiklerin"
 							>
@@ -82,8 +88,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/profil/sorular"
 							>
@@ -94,8 +100,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/profil/cevaplar"
 							>
@@ -106,8 +112,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<Link
-								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black flex items-center px-3", {
-									"bg-zinc-100 text-black": active
+								className={classNames("h-8 text-sm text-zinc-800 font-medium rounded hover:bg-zinc-100 hover:text-black dark:hover:bg-zinc-700 dark:text-white flex items-center px-3", {
+									"bg-zinc-100 dark:bg-zinc-700 text-black": active
 								})}
 								to="/profil/bildirimler"
 							>
@@ -118,8 +124,8 @@ function UserMenu() {
 					<Menu.Item>
 						{({active}) => (
 							<button
-								className={classNames("h-8 text-sm text-red-600 font-medium rounded hover:bg-red-50 flex items-center px-3", {
-									"bg-red-50": active
+								className={classNames("h-8 text-sm text-red-600 dark:text-red-500 font-medium rounded hover:bg-red-50 dark:hover:bg-red-500 dark:hover:text-white flex items-center px-3", {
+									"bg-red-50 dark:bg-red-500 dark:!text-white": active
 								})}
 								onClick={() => removeUser()}
 							>
@@ -135,11 +141,12 @@ function UserMenu() {
 
 export default function Auth() {
 
+	const {breakpoint} = useBreakpoint()
 	const user = useAuth()
 
 	return (
-		<div>
-			{!user && (
+		<>
+			{(!user && breakpoint === 'desktop') && (
 				<Button
 					onClick={() => modal.append('auth.login', {
 						name: 'Tayfun',
@@ -150,7 +157,19 @@ export default function Auth() {
 					Giriş yap
 				</Button>
 			)}
+			{(!user && breakpoint !== 'desktop') && (
+				<button
+					className="w-9 h-9 flex items-center justify-center text-primary dark:text-zinc-400"
+					onClick={() => modal.append('auth.login', {
+						name: 'Tayfun',
+						surname: 'Erbilen'
+					})}
+					type="button"
+				>
+					<LuUser size={24} />
+				</button>
+			)}
 			{user && <UserMenu/>}
-		</div>
+		</>
 	)
 }
