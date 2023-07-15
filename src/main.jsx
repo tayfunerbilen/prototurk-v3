@@ -14,9 +14,9 @@ import {worker} from "~/mocks/browser";
 
 const queryClient = new QueryClient()
 
-if (import.meta.env.MODE === 'development') {
+// if (import.meta.env.MODE === 'development') {
 	worker.start()
-}
+// }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<Provider store={store}>
