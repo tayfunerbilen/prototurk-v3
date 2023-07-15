@@ -1,4 +1,4 @@
-import {useAuth} from "~/stores/auth/hooks.js";
+import {useAuth} from "~/stores/auth/hooks";
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 
@@ -12,7 +12,7 @@ export default function AuthLayout({ children }) {
 				replace: true
 			})
 		}
-	}, [user])
+	}, [user, redirect])
 
 	if (user) {
 		return children

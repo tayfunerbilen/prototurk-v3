@@ -1,11 +1,12 @@
-import Section from "~/components/section/index.jsx";
-import {articles} from "~/fake-api/index.js";
-import ArticleCard from "~/components/cards/article/index.jsx";
-import Pagination from "~/components/pagination/index.jsx";
+import Section from "~/components/section";
+import {articles} from "~/fake-api";
+import ArticleCard from "~/components/cards/article";
+import Pagination from "~/components/pagination";
+import OpacityContent from "~/components/animated/opacity";
 
 export default function Articles() {
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <OpacityContent className="max-w-[1200px] mx-auto">
       <Section
         title="Makaleler"
       >
@@ -14,6 +15,6 @@ export default function Articles() {
         </div>
         <Pagination count={24} />
       </Section>
-    </div>
+    </OpacityContent>
   )
 }

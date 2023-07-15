@@ -6,6 +6,7 @@ import Categories from "~/layouts/web/components/sidebar/components/categories/i
 import {useBreakpoint} from "~/hooks/use-breakpoint.js";
 import classNames from "classnames";
 import {Suspense} from "react";
+import OpacityContent from "~/components/animated/opacity";
 
 export default function Sidebar() {
 
@@ -13,7 +14,7 @@ export default function Sidebar() {
   const type = useSidebarType()
 
   return (
-    <aside className={classNames("h-[calc(100vh-3.5rem)] fixed top-[3.5rem] p-2 flex flex-col overflow-auto transition-colors", {
+    <OpacityContent className={classNames("h-[calc(100vh-3.5rem)] fixed top-[3.5rem] p-2 flex flex-col overflow-auto transition-colors", {
       "w-[250px] border-r border-zinc-200 dark:border-zinc-700": breakpoint === 'desktop',
       "w-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur z-10": breakpoint !== 'desktop',
     })}>
@@ -28,6 +29,6 @@ export default function Sidebar() {
       <Suspense fallback="..">
         <Appearance />
       </Suspense>
-    </aside>
+    </OpacityContent>
   )
 }

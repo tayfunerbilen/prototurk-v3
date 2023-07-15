@@ -1,7 +1,9 @@
+import OpacityContent from "~/components/animated/opacity";
+
 export default function LectureRequests() {
   return (
-    <div>
+    <OpacityContent>
       ders istekleri page
-    </div>
+    </OpacityContent>
   )
 }

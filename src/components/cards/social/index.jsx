@@ -17,9 +17,9 @@ function getSocialMediaIcon(type) {
 function getSocialMediaTitle(type) {
   switch (type) {
     case 'twitter':
-      return <>Twitter'da <b>@prototurkcom</b> hesabını takip etmeyi unutma!</>
+      return <>Twitter&#39;da <b>@prototurkcom</b> hesabını takip etmeyi unutma!</>
     case 'instagram':
-      return <>Instagram'da <b>@prototurk.official</b> hesabını takip etmeyi unutma!</>
+      return <>Instagram&#39;da <b>@prototurk.official</b> hesabını takip etmeyi unutma!</>
     case 'telegram':
       return 'Telegram grubumuza katıl!'
   }

@@ -3,12 +3,10 @@ import {modal} from "~/stores/modal/actions";
 import {useAuth} from "~/stores/auth/hooks.js";
 import {Menu, Transition} from '@headlessui/react'
 import {Link} from "react-router-dom";
-import {removeUser} from "~/stores/auth/actions.js";
+import {removeUser} from "~/stores/auth/actions";
 import {MdArrowDropDown} from "react-icons/md";
 import classNames from "classnames";
-import {useBreakpoint} from "~/hooks/use-breakpoint.js";
-import {RiUser3Fill, RiUserFill, RiUserLine} from "react-icons/ri";
-import {CiLogin} from "react-icons/ci";
+import {useBreakpoint} from "~/hooks/use-breakpoint";
 import {LuUser} from "react-icons/lu";
 
 function UserMenu() {

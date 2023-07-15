@@ -18,7 +18,7 @@ body.dark {
 
 /* PAGINATION */
 .pagination {
-    @apply flex items-center gap-x-1.5 border border-zinc-200 p-3 rounded
+    @apply flex items-center gap-x-1.5 border border-zinc-200 dark:border-zinc-700 p-3 rounded
 }
 .pagination .previous {
     @apply mr-auto
@@ -27,13 +27,13 @@ body.dark {
     @apply ml-auto
 }
 .pagination li:not(.break) a {
-    @apply w-9 h-9 rounded-full border border-zinc-300 flex items-center justify-center text-sm text-zinc-500 font-semibold hover:border-zinc-600 hover:text-black
+    @apply w-9 h-9 rounded-full border border-zinc-300 dark:border-zinc-700 flex items-center justify-center text-sm text-zinc-500 font-semibold hover:border-zinc-600 hover:text-black dark:hover:text-white dark:hover:border-zinc-600
 }
 .pagination li.break a {
     @apply h-9 flex items-center text-zinc-400 pb-2
 }
 .pagination li.selected a {
-    @apply !bg-primary !border-primary !text-white
+    @apply !bg-primary !border-primary !text-white dark:!bg-blue-500 dark:!border-blue-500
 }
 
 .swiper-pagination-bullet{

@@ -5,7 +5,8 @@ import ModalTitle from "~/components/modal/header";
 import Or from "~/components/or";
 import { modal } from "~/stores/modal/actions";
 import { loginSchema } from "~/validations";
-import {setUser} from "~/stores/auth/actions.js";
+import {setUser} from "~/stores/auth/actions";
+import PropTypes from "prop-types";
 
 export default function LoginModal({ destroy }) {
   return (
@@ -40,4 +41,8 @@ export default function LoginModal({ destroy }) {
       </Formik>
     </>
   )
+}
+
+LoginModal.propTypes = {
+  destroy: PropTypes.func
 }

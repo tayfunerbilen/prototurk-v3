@@ -5,6 +5,7 @@ import ModalTitle from "~/components/modal/header";
 import Or from "~/components/or";
 import { modal } from "~/stores/modal/actions";
 import { registerSchema } from "~/validations";
+import PropTypes from "prop-types";
 
 export default function RegisterModal({ destroyAll }) {
   return (
@@ -36,4 +37,8 @@ export default function RegisterModal({ destroyAll }) {
       </Formik>
     </div>
   )
+}
+
+RegisterModal.propTypes = {
+  destroyAll: PropTypes.func
 }

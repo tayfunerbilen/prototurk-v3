@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom"
+import OpacityContent from "~/components/animated/opacity";
 
 export default function ArticleDetail() {
   const { slug } = useParams()
   return (
-    <div>
+    <OpacityContent>
       makale detayi = {slug}
-    </div>
+    </OpacityContent>
   )
 }
