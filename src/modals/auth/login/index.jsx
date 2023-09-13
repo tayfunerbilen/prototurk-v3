@@ -7,12 +7,15 @@ import { modal } from "~/stores/modal/actions";
 import { loginSchema } from "~/validations";
 import {setUser} from "~/stores/auth/actions";
 import PropTypes from "prop-types";
+import {useTranslation} from "react-i18next";
+import {authLang} from "~/utils/languages/auth.js";
 
 export default function LoginModal({ destroy }) {
+    const {t,i18n}=useTranslation();
   return (
     <>
       <ModalTitle
-        title="Giriş yap"
+        title={t(authLang("header_text"))}
       />
       <Formik
         validationSchema={loginSchema}
@@ -26,16 +29,18 @@ export default function LoginModal({ destroy }) {
         }}
       >
         <Form className="grid gap-y-4 p-4">
-          <Input label="Kullanıcı Adı" name="username" />
-          <Input label="Parola" name="password" type="password" />
-          <Button type="submit">Giris yap</Button>
-          <Or />
+          <Input label={t(authLang("label_kadi_text"))} name="username" />
+          <Input label={t(authLang("label_pass_text"))} name="password" type="password" />
+          <Button type="submit">
+              {t(authLang("login_button_text"))}
+          </Button>
+          <Or label={t(authLang("or_text"))} />
           <Button
             variant="primary-outline"
             type="button"
             onClick={() => modal.append('auth.register')}
           >
-            Hesap Aç
+              {t(authLang("register_text"))}
           </Button>
         </Form>
       </Formik>

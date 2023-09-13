@@ -2,23 +2,23 @@ import { LuMoonStar } from "react-icons/lu"
 import { FiSun } from "react-icons/fi"
 import { CgScreen } from "react-icons/cg"
 
-export const apperance = [
+export const appearance = [
   {
     key: 'default',
-    value: 'apperance.default'
+    value: 'appearance.default'
   },
   {
     key: 'light',
-    value: 'apperance.light'
+    value: 'appearance.light'
   },
   {
     key: 'dark',
-    value: 'apperance.dark'
+    value: 'appearance.dark'
   }
 ]
 
-export const getApperanceName = key => apperance.find(a => a.key === key)?.value
-export const getApperanceIcon = (key, colorScheme = false) => {
+export const getAppearanceName = key => appearance.find(a => a.key === key)?.value
+export const getAppearanceIcon = (key, colorScheme = false) => {
   switch (key) {
     case 'default':
       if (!colorScheme) {

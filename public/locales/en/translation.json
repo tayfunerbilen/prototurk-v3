@@ -1,7 +1,26 @@
 {
-  "apperance": {
+  "appearance": {
     "default": "System",
     "dark": "Dark",
     "light": "Light"
+  },
+  "auth": {
+    "login": {
+      "login_button_text": "Login",
+      "header_text": "Login",
+      "or_text": "Or",
+      "register_text": "Create Account",
+      "label_kadi_text": "Username",
+      "label_pass_text": "Password"
+    },
+    "register": {
+      "header_text": "Create Account",
+      "or_text": "Already a member?",
+      "register_text": "Create Account",
+      "login_button_text": "Sign In",
+      "label_kadi_text": "Username",
+      "label_email_text": "Email",
+      "label_pass_text": "Password"
+    }
   }
 }

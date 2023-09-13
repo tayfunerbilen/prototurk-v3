@@ -1,7 +1,26 @@
 {
-  "apperance": {
+  "appearance": {
     "default": "Sistem",
     "dark": "Koyu",
     "light": "Açık"
+  },
+  "auth": {
+    "login": {
+      "login_button_text": "Giriş yap",
+      "header_text": "Giriş yap",
+      "or_text": "Ya da",
+      "register_text": "Hesap Aç",
+      "label_kadi_text": "Kullanıcı Adı",
+      "label_pass_text": "Parola"
+    },
+    "register": {
+      "header_text": "Hesap Aç",
+      "or_text": "Zaten üye misin?",
+      "register_text": "Hesap Aç",
+      "login_button_text": "Oturum Aç",
+      "label_kadi_text": "Kullanıcı Adı",
+      "label_email_text": "E-posta",
+      "label_pass_text": "Parola"
+    }
   }
 }

@@ -8,8 +8,11 @@ import {MdArrowDropDown} from "react-icons/md";
 import classNames from "classnames";
 import {useBreakpoint} from "~/hooks/use-breakpoint";
 import {LuUser} from "react-icons/lu";
+import {authLang} from "~/utils/languages/auth.js";
+import {useTranslation} from "react-i18next";
 
 function UserMenu() {
+// const {t,i18n}=useTranslation();
 
 	const user = useAuth()
 
@@ -19,7 +22,7 @@ function UserMenu() {
 				<img
 					src="https://www.gravatar.com/avatar/8b0987af0a615d1535491eca8c1362e4?s=80&d=mp&r=g"
 					className="w-8 h-8 rounded-full object-cover"
-				/>
+				 alt={"User avatar"}/>
 				<div className="flex items-center dark:text-white">
 					<span className="hidden md:block">@{user.username}</span>
 					<MdArrowDropDown size={22}/>
@@ -138,10 +141,10 @@ function UserMenu() {
 }
 
 export default function Auth() {
+	const {t,i18n}=useTranslation();
 
 	const {breakpoint} = useBreakpoint()
 	const user = useAuth()
-
 	return (
 		<>
 			{(!user && breakpoint === 'desktop') && (
@@ -152,7 +155,7 @@ export default function Auth() {
 					})}
 					type="button"
 				>
-					Giriş yap
+					{t(authLang("login_button_text"))}
 				</Button>
 			)}
 			{(!user && breakpoint !== 'desktop') && (

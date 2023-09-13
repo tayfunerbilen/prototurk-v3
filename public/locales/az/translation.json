@@ -1,7 +1,26 @@
 {
-  "apperance": {
+  "appearance": {
     "default": "Sistem",
     "dark": "Qaranlıq",
     "light": "Açıq"
+  },
+  "auth": {
+    "login": {
+      "login_button_text": "Daxil ol",
+      "header_text": "Daxil ol",
+      "or_text": "Və ya",
+      "register_text": "Hesab aç",
+      "label_kadi_text": "İstifadəçi adı",
+      "label_pass_text": "Şifrə"
+    },
+    "register": {
+      "header_text": "Hesab aç",
+      "or_text": "Artıq üzvsünüz?",
+      "register_text": "Hesab aç",
+      "login_button_text": "Oturum aç",
+      "label_kadi_text": "İstifadəçi adı",
+      "label_email_text": "E-poçt",
+      "label_pass_text": "Şifrə"
+    }
   }
 }
