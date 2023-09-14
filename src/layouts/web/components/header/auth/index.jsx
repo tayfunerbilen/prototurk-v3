@@ -8,12 +8,9 @@ import {MdArrowDropDown} from "react-icons/md";
 import classNames from "classnames";
 import {useBreakpoint} from "~/hooks/use-breakpoint";
 import {LuUser} from "react-icons/lu";
-import {authLang} from "~/utils/languages/auth.js";
-import {useTranslation} from "react-i18next";
+import languagesLn from "~/utils/languages/index.js";
 
 function UserMenu() {
-// const {t,i18n}=useTranslation();
-
 	const user = useAuth()
 
 	return (
@@ -141,8 +138,6 @@ function UserMenu() {
 }
 
 export default function Auth() {
-	const {t,i18n}=useTranslation();
-
 	const {breakpoint} = useBreakpoint()
 	const user = useAuth()
 	return (
@@ -155,7 +150,7 @@ export default function Auth() {
 					})}
 					type="button"
 				>
-					{t(authLang("login_button_text"))}
+					{languagesLn("login","login_button_text")}
 				</Button>
 			)}
 			{(!user && breakpoint !== 'desktop') && (

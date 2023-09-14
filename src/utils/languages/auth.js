@@ -59,7 +59,7 @@ export const auth = {
 
 const authControl = authName => auth[authName] || [];
 
-export const authLang = key => {
-    const auth = authControl("register")
-    return `auth.${auth.find(auth => auth.key === key)?.value}`
+export const authLang = (key,input) => {
+    const auth = authControl(key)
+    return `auth.${auth.find(auth => auth.key === input)?.value}`
 }

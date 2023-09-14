@@ -1,16 +1,17 @@
-import { Menu } from '@headlessui/react'
-import { setTheme } from "~/stores/app/actions"
-import { useTheme } from "~/stores/app/hooks"
-import { appearance, getAppearanceIcon, getAppearanceName, getLanguageName, languages } from '~/utils/languages/appearance.jsx'
+import {Menu} from '@headlessui/react'
+import {setTheme} from "~/stores/app/actions"
+import {useTheme} from "~/stores/app/hooks"
+import {appearance, getAppearanceIcon, getLanguageName, languages} from '~/utils/languages/appearance.jsx'
 import classNames from 'classnames'
 import useColorScheme from '~/hooks/use-color-scheme'
-import { useTranslation } from 'react-i18next'
+import {useTranslation} from 'react-i18next'
+import languagesLn from "~/utils/languages/index.js";
 
 export default function Appearance() {
 
   const theme = useTheme()
   const { colorScheme } = useColorScheme()
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
   return (
 
     <div className="mt-auto gap-y-1 gap-x-2 grid grid-cols-2">
@@ -20,7 +21,7 @@ export default function Appearance() {
           <span className="text-black dark:text-white">
             {getAppearanceIcon(theme, colorScheme)}
           </span>
-          {t(getAppearanceName(theme))}
+          {languagesLn("appearance", theme)}
         </Menu.Button>
         <Menu.Items as="div" className="absolute bottom-full left-0 w-[234px] bg-white border border-zinc-300 rounded overflow-hidden grid -translate-y-1 dark:bg-zinc-800 dark:text-white dark:border-zinc-700">
           {appearance.map(({ key, value }, index) => (
@@ -42,7 +43,7 @@ export default function Appearance() {
                   })}>
                     {getAppearanceIcon(key)}
                   </span>
-                  {t(value)}
+                  {languagesLn("appearance", `${value}`, true)}
                 </button>
               )}
             </Menu.Item>
