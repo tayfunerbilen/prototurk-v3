@@ -6,12 +6,12 @@ import Or from "~/components/or";
 import { modal } from "~/stores/modal/actions";
 import { registerSchema } from "~/validations";
 import PropTypes from "prop-types";
-
+import languages from "~/utils/languages/index.js";
 export default function RegisterModal({ destroyAll }) {
   return (
     <div className="w-[500px] max-w-full">
       <ModalTitle
-        title="Hesap Aç"
+        title={languages("register","header_text")}
       />
       <Formik
         validationSchema={registerSchema}
@@ -24,15 +24,15 @@ export default function RegisterModal({ destroyAll }) {
         onSubmit={values => console.log('values', values)}
       >
         <Form className="grid gap-y-4 p-4">
-          <Input name="username" label="Kullanıcı Adı" />
-          <Input name="email" type="email" label="E-posta" />
-          <Input name="password" type="password" label="Parola" />
-          <Button>Hesap Aç</Button>
-          <Or label="Zaten üye misin?" />
+          <Input name="username" label={languages("register","label_kadi_text")} />
+          <Input name="email" type="email" label={languages("register","label_email_text")} />
+          <Input name="password" type="password" label={languages("register","label_pass_text")} />
+          <Button>{languages("register","register_text")}</Button>
+          <Or label={languages("register","or_text")} />
           <Button variant="primary-outline" onClick={() => {
             destroyAll()
             modal.append('auth.login')
-          }}>Oturum Aç</Button>
+          }}>{languages("register","login_button_text")}</Button>
         </Form>
       </Formik>
     </div>

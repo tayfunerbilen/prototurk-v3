@@ -10,7 +10,7 @@ export default function Categories() {
 
 	return (
 		<section className="pt-5 mt-5 border-t dark:border-zinc-700">
-			{filteredCategories.map((category, key) => <MenuItem item={category} key={key} />)}
+			{filteredCategories.map((category, key) => <MenuItem item={category} key={key} ln={"null"} />)}
 		</section>
 	)
 }

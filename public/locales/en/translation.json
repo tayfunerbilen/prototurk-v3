@@ -1,7 +1,64 @@
 {
-  "apperance": {
+  "appearance": {
     "default": "System",
     "dark": "Dark",
     "light": "Light"
+  },
+  "auth": {
+    "login": {
+      "login_button_text": "Login",
+      "header_text": "Login",
+      "or_text": "Or",
+      "register_text": "Create Account",
+      "label_kadi_text": "Username",
+      "label_pass_text": "Password"
+    },
+    "register": {
+      "header_text": "Create Account",
+      "or_text": "Already a member?",
+      "register_text": "Create Account",
+      "login_button_text": "Sign In",
+      "label_kadi_text": "Username",
+      "label_email_text": "Email",
+      "label_pass_text": "Password"
+    }
+  },
+  "modal_menu": {
+    "profile": "Profile",
+    "profile_edit": "Edit Profile",
+    "profile_followers": "Followers",
+    "profile_what_ı_follower": "Following",
+    "questions": "Questions",
+    "answers": "Answers",
+    "notifications": "Notifications",
+    "logout": "Logout"
+  },
+  "sidebar": {
+    "SIDEBAR_MENU": {
+      "homepage": "Homepage",
+      "discover": "Discover",
+      "articles": "Articles",
+      "questionAndAnswer": "Q&A",
+      "courseRequests": "Course Requests",
+      "newText": "New"
+    },
+    "QA_SIDEBAR_MENU": {
+      "finalQuestions": "Final Questions",
+      "unansweredQuestions": "Unanswered Questions",
+      "unsolvedQuestions": "Unsolved Questions",
+      "categories": "Categories",
+      "popularQuestions": "Popular Questions"
+    },
+    "PROFILE_SIDEBAR_MENU": {
+      "profile": "Profile",
+      "followers": "Followers",
+      "yourFollowers": "Your Followers",
+      "questions": "Questions",
+      "answers": "Answers",
+      "notifications": "Notifications",
+      "yourPublicProfile": "Public Profile",
+      "logout": "Logout"
+    }
   }
 }
+

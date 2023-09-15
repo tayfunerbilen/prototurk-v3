@@ -1,25 +1,24 @@
 import {removeUser} from "~/stores/auth/actions.js";
-
 export const SIDEBAR_MENU = [
   {
     path: '/',
-    title: 'Anasayfa'
+    title: "homepage"
   },
   {
     path: '/kesfet',
-    title: 'Keşfet'
+    title: 'discover'
   },
   {
     path: '/makaleler',
-    title: 'Makaleler'
+    title: 'articles'
   },
   {
     path: '/soru-cevap',
-    title: 'Soru & Cevap'
+    title: 'questionAndAnswer'
   },
   {
     path: '/ders-istekleri',
-    title: 'Ders İstekleri',
+    title: 'courseRequests',
     new: true
   }
 ]
@@ -27,58 +26,58 @@ export const SIDEBAR_MENU = [
 export const QA_SIDEBAR_MENU = [
   {
     path: '/soru-cevap',
-    title: 'Son Sorular'
+    title: 'finalQuestions'
   },
   {
     path: '/cevaplanmamis-sorular',
-    title: 'Cevaplanmamış Sorular'
+    title: 'unansweredQuestions'
   },
   {
     path: '/cozulmemis-sorular',
-    title: 'Çözülmemiş Sorular'
+    title: 'unsolvedQuestions'
   },
   {
     path: '/kategoriler',
-    title: 'Kategoriler'
+    title: 'categories'
   },
   {
     path: '/populer-sorular',
-    title: 'Popüler Sorular'
+    title: 'popularQuestions'
   }
 ]
 
 export const PROFILE_SIDEBAR_MENU = [
   {
     path: '/profil',
-    title: 'Profil'
+    title:'profile'
   },
   {
     path: '/profil/takipciler',
-    title: 'Takipçiler'
+    title:'followers'
   },
   {
     path: '/profil/takip-ettiklerin',
-    title: 'Takip Ettiklerin'
+    title: 'yourFollowers'
   },
   {
     path: '/profil/sorular',
-    title: 'Sorular'
+    title:'questions'
   },
   {
     path: '/profil/cevaplar',
-    title: 'Cevaplar'
+    title:'answers'
   },
   {
     path: '/profil/bildirimler',
-    title: 'Bildirimler'
+    title:'notifications'
   },
   {
     path: '/',
-    title: 'Herkese Açık Profilin'
+    title: 'yourPublicProfile'
   },
   {
     onClick: () => removeUser(),
     sensitive: true,
-    title: 'Çıkış Yap'
+    title: 'logout'
   },
 ]
