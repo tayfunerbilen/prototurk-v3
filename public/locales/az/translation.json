@@ -22,5 +22,42 @@
       "label_email_text": "E-poçt",
       "label_pass_text": "Şifrə"
     }
+  },
+  "modal_menu": {
+    "profile": "Profil",
+    "profile_edit": "Profilin Redaktəsi",
+    "profile_followers": "İzləyicilər",
+    "profile_what_ı_follower": "İzlədiyiniz",
+    "questions": "Sualar",
+    "answers": "Cavablar",
+    "notifications": "Bildirişlər",
+    "logout": "Çıxış Et"
+  },
+  "sidebar": {
+    "SIDEBAR_MENU": {
+      "homepage": "Əsas Səhifə",
+      "discover": "Axtar",
+      "articles": "Məqalələr",
+      "questionAndAnswer": "Sual və Cavab",
+      "courseRequests": "Kurs Tələbləri",
+      "newText": "Yeni"
+    },
+    "QA_SIDEBAR_MENU": {
+      "finalQuestions": "Son Suallar",
+      "unansweredQuestions": "Cavablanmamış Suallar",
+      "unsolvedQuestions": "Həll Edilməmiş Suallar",
+      "categories": "Kateqoriyalar",
+      "popularQuestions": "Populyar Suallar"
+    },
+    "PROFILE_SIDEBAR_MENU": {
+      "profile": "Profil",
+      "followers": "İzləyicilər",
+      "yourFollowers": "Sizin İzləyiciləriniz",
+      "questions": "Sualar",
+      "answers": "Cavablar",
+      "notifications": "Bildirişlər",
+      "yourPublicProfile": "Hərəkətə açıq Profiliniz",
+      "logout": "Çıxış Et"
+    }
   }
 }

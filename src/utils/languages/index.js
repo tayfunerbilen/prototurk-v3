@@ -2,6 +2,7 @@ import {useTranslation} from "react-i18next";
 import {authLang} from "~/utils/languages/auth.js";
 import {getAppearanceName} from "~/utils/languages/appearance.jsx";
 import PropTypes from "prop-types";
+import {sideLang} from "~/utils/languages/sidebar.js";
 
 const languagesLn = (action, input, appearance = false) => {
     /*
@@ -22,6 +23,12 @@ const languagesLn = (action, input, appearance = false) => {
 
             }
             return t(getAppearanceName(input))
+        case "modal_menu":
+            return t(authLang(action, input))
+        case "SIDEBAR_MENU":
+        case "QA_SIDEBAR_MENU":
+        case "PROFILE_SIDEBAR_MENU":
+            return t(sideLang(action,input))
 
         default:
             return "";

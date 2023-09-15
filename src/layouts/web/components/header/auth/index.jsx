@@ -43,7 +43,7 @@ function UserMenu() {
 								})}
 								to="/uye/tayfunerbilen"
 							>
-								Profil
+								{languagesLn("modal_menu","profile")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -55,7 +55,7 @@ function UserMenu() {
 								})}
 								to="/profil"
 							>
-								Profil Düzenle
+								{languagesLn("modal_menu","profile_edit")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -67,7 +67,7 @@ function UserMenu() {
 								})}
 								to="/profil/takipciler"
 							>
-								Takipçiler
+								{languagesLn("modal_menu","profile_followers")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -79,7 +79,7 @@ function UserMenu() {
 								})}
 								to="/profil/takip-ettiklerin"
 							>
-								Takip Ettiklerin
+								{languagesLn("modal_menu","profile_what_ı_follower")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -91,7 +91,7 @@ function UserMenu() {
 								})}
 								to="/profil/sorular"
 							>
-								Sorular
+								{languagesLn("modal_menu","questions")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -103,7 +103,7 @@ function UserMenu() {
 								})}
 								to="/profil/cevaplar"
 							>
-								Cevaplar
+								{languagesLn("modal_menu","answers")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -115,7 +115,7 @@ function UserMenu() {
 								})}
 								to="/profil/bildirimler"
 							>
-								Bildirimler
+								{languagesLn("modal_menu","notifications")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -127,7 +127,7 @@ function UserMenu() {
 								})}
 								onClick={() => removeUser()}
 							>
-								Çıkış Yap
+								{languagesLn("modal_menu","logout")}
 							</button>
 						)}
 					</Menu.Item>

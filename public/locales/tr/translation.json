@@ -21,6 +21,43 @@
       "label_kadi_text": "Kullanıcı Adı",
       "label_email_text": "E-posta",
       "label_pass_text": "Parola"
+    },
+    "modal_menu": {
+      "profile": "Profil",
+      "profile_edit": "Profil Düzenle",
+      "profile_followers": "Takipçiler",
+      "profile_what_ı_follower": "Takip Ettiklerin",
+      "questions": "Sorular",
+      "answers": "Cevaplar",
+      "notifications": "Bildirimler",
+      "logout": "Çıkış Yap"
+    }
+  },
+  "sidebar": {
+    "SIDEBAR_MENU": {
+      "homepage": "Anasayfa",
+      "discover": "Keşfet",
+      "articles": "Makaleler",
+      "questionAndAnswer": "Soru & Cevap",
+      "courseRequests": "Ders İstekleri",
+      "newText": "Yeni"
+    },
+    "QA_SIDEBAR_MENU": {
+      "finalQuestions": "Son Sorular",
+      "unansweredQuestions": "Cevaplanmamış Sorular",
+      "unsolvedQuestions": "Çözülmemiş Sorular",
+      "categories": "Katekoriler",
+      "popularQuestions": "Popüler Sorular"
+    },
+    "PROFILE_SIDEBAR_MENU": {
+      "profile": "profil",
+      "followers": "Takipçiler",
+      "yourFollowers": "Your Followers",
+      "questions": "Sorular",
+      "answers": "Cevaplar",
+      "notifications": "Bildirimler",
+      "yourPublicProfile": "Herkese Açık Profilin",
+      "logout": "Çıkış Yap"
     }
   }
 }
