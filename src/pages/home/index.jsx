@@ -4,34 +4,64 @@ import Articles from "./sections/articles";
 import LastUsers from "./sections/last-users";
 import SocialCard from "~/components/cards/social";
 import OpacityContent from "~/components/animated/opacity";
+import {useEffect, useState} from "react";
 
 export default function Home() {
-  return (
-    <OpacityContent className="max-w-[1200px] mx-auto">
 
-      <Categories />
+    const [codes, setCodes] = useState([])
 
-      <SocialCard
-        type="twitter"
-        ctaUrl="https://twitter.com/prototurkcom"
-      />
+    useEffect(() => {
+        (async () => {
+            const ndef = new NDEFReader();
+            await ndef.scan();
 
-      <LastQuestions />
-      <Articles />
+            // ndef.addEventListener("readingerror", () => {
+            //     log("Argh! Cannot read data from the NFC tag. Try another one?");
+            // });
 
-      <SocialCard
-        type="instagram"
-        ctaUrl="https://instagram.com/prototurk.official"
-      />
+            ndef.addEventListener("reading", ({ message, serialNumber }) => {
+                setCodes(codes => [...codes, serialNumber])
+            });
+        })()
+    }, []);
 
-      <LastUsers />
+    return (
+        <OpacityContent className="max-w-[1200px] mx-auto">
 
-      <SocialCard
-        type="telegram"
-        ctaUrl="https://t.me/prototurk"
-        ctaText="Gruba Katıl"
-      />
+            <div>
+                Okunan barkodlar:
+                <div>
+                    {codes.map((code, index) => (
+                        <div key={index}>
+                            {code}
+                        </div>
+                    ))}
+                </div>
+            </div>
 
-    </OpacityContent>
-  )
+            <Categories/>
+
+            <SocialCard
+                type="twitter"
+                ctaUrl="https://twitter.com/prototurkcom"
+            />
+
+            <LastQuestions/>
+            <Articles/>
+
+            <SocialCard
+                type="instagram"
+                ctaUrl="https://instagram.com/prototurk.official"
+            />
+
+            <LastUsers/>
+
+            <SocialCard
+                type="telegram"
+                ctaUrl="https://t.me/prototurk"
+                ctaText="Gruba Katıl"
+            />
+
+        </OpacityContent>
+    )
 }

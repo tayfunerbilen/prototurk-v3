@@ -10,7 +10,7 @@
 }
 
 body {
-    @apply bg-white transition-colors
+    @apply bg-white transition-colors;
 }
 body.dark {
     @apply bg-zinc-900
