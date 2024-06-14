@@ -9,26 +9,29 @@ import {useEffect, useState} from "react";
 export default function Home() {
 
     const [codes, setCodes] = useState([])
+    const [scan, setScan] = useState(false)
 
     useEffect(() => {
-        (async () => {
+        if (scan) {
             const ndef = new NDEFReader();
-            await ndef.scan();
-
-            // ndef.addEventListener("readingerror", () => {
-            //     log("Argh! Cannot read data from the NFC tag. Try another one?");
-            // });
-
-            ndef.addEventListener("reading", ({ message, serialNumber }) => {
-                setCodes(codes => [...codes, serialNumber])
-            });
-        })()
-    }, []);
+            ndef.scan()
+                .then(() => {
+                    ndef.addEventListener("reading", ({ message, serialNumber }) => {
+                        setCodes(codes => [...codes, serialNumber])
+                    });
+                })
+        }
+    }, [scan]);
 
     return (
         <OpacityContent className="max-w-[1200px] mx-auto">
 
             <div>
+                <button
+                    onClick={() => setScan(true)}
+                >
+                    Izin al
+                </button>
                 Okunan barkodlar:
                 <div>
                     {codes.map((code, index) => (
