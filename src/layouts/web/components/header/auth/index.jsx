@@ -8,9 +8,9 @@ import {MdArrowDropDown} from "react-icons/md";
 import classNames from "classnames";
 import {useBreakpoint} from "~/hooks/use-breakpoint";
 import {LuUser} from "react-icons/lu";
+import languagesLn from "~/utils/languages/index.js";
 
 function UserMenu() {
-
 	const user = useAuth()
 
 	return (
@@ -19,7 +19,7 @@ function UserMenu() {
 				<img
 					src="https://www.gravatar.com/avatar/8b0987af0a615d1535491eca8c1362e4?s=80&d=mp&r=g"
 					className="w-8 h-8 rounded-full object-cover"
-				/>
+				 alt={"User avatar"}/>
 				<div className="flex items-center dark:text-white">
 					<span className="hidden md:block">@{user.username}</span>
 					<MdArrowDropDown size={22}/>
@@ -43,7 +43,7 @@ function UserMenu() {
 								})}
 								to="/uye/tayfunerbilen"
 							>
-								Profil
+								{languagesLn("modal_menu","profile")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -55,7 +55,7 @@ function UserMenu() {
 								})}
 								to="/profil"
 							>
-								Profil Düzenle
+								{languagesLn("modal_menu","profile_edit")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -67,7 +67,7 @@ function UserMenu() {
 								})}
 								to="/profil/takipciler"
 							>
-								Takipçiler
+								{languagesLn("modal_menu","profile_followers")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -79,7 +79,7 @@ function UserMenu() {
 								})}
 								to="/profil/takip-ettiklerin"
 							>
-								Takip Ettiklerin
+								{languagesLn("modal_menu","profile_what_ı_follower")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -91,7 +91,7 @@ function UserMenu() {
 								})}
 								to="/profil/sorular"
 							>
-								Sorular
+								{languagesLn("modal_menu","questions")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -103,7 +103,7 @@ function UserMenu() {
 								})}
 								to="/profil/cevaplar"
 							>
-								Cevaplar
+								{languagesLn("modal_menu","answers")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -115,7 +115,7 @@ function UserMenu() {
 								})}
 								to="/profil/bildirimler"
 							>
-								Bildirimler
+								{languagesLn("modal_menu","notifications")}
 							</Link>
 						)}
 					</Menu.Item>
@@ -127,7 +127,7 @@ function UserMenu() {
 								})}
 								onClick={() => removeUser()}
 							>
-								Çıkış Yap
+								{languagesLn("modal_menu","logout")}
 							</button>
 						)}
 					</Menu.Item>
@@ -138,10 +138,8 @@ function UserMenu() {
 }
 
 export default function Auth() {
-
 	const {breakpoint} = useBreakpoint()
 	const user = useAuth()
-
 	return (
 		<>
 			{(!user && breakpoint === 'desktop') && (
@@ -152,7 +150,7 @@ export default function Auth() {
 					})}
 					type="button"
 				>
-					Giriş yap
+					{languagesLn("login","login_button_text")}
 				</Button>
 			)}
 			{(!user && breakpoint !== 'desktop') && (

@@ -20,12 +20,12 @@ export default function Sidebar() {
     })}>
       {type === 'app' && (
         <>
-          <SidebarMenu menu={SIDEBAR_MENU} />
+          <SidebarMenu menu={SIDEBAR_MENU} ln={"SIDEBAR_MENU"} />
           <Categories/>
         </>
       )}
-      {type === 'qa' && <SidebarMenu menu={QA_SIDEBAR_MENU} />}
-      {type === 'profile' && <SidebarMenu menu={PROFILE_SIDEBAR_MENU} />}
+      {type === 'qa' && <SidebarMenu menu={QA_SIDEBAR_MENU} ln={"QA_SIDEBAR_MENU"} />}
+      {type === 'profile' && <SidebarMenu menu={PROFILE_SIDEBAR_MENU} ln={"PROFILE_SIDEBAR_MENU"} />}
       <Suspense fallback="..">
         <Appearance />
       </Suspense>
